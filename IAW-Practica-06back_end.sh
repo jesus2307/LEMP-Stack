@@ -28,8 +28,7 @@ Sed -i ‘s/127.0.0.1/0.0.0.0/” etc/msql/msql.conf.d/mysql.cnf
 #reiniciar mysql
 sudo /etc/init.d/mysql restart
 
-# TODO: Instalación de la aplicación web propuesta
-# ------------------------------------------------------------------------------
+# Instalación de la aplicación web propuesta
 #clonar el repositorio#
 cd /home/ubuntu
 rm -rf iaw-practica-lamp 
