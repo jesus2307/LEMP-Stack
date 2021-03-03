@@ -6,8 +6,7 @@
 # Definimos la contraseña de root como variable
 DB_ROOT_PASSWD=root
 DB_USU_PASSWD=usuario
-# Instalación y configuración de MySQL 
-
+# Instalación de MySQL 
 # Habilitamos el modo de shell para mostrar los comandos que se ejecutan
 set -x
 # Actualizamos y actualizamos la lista de paquetes
