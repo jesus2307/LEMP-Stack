@@ -5,26 +5,24 @@ HTTPASSWD_DIR=/home/ubuntu
 HTTPASSWD_USER=usuario
 HTTPASSWD_PASSWD=usuario
 IP_PRIVADA_MYSQL=172.31.61.19
-
 # ------------------------------------------------------------------------------
 # Instalación de la pila LAMP
 # ------------------------------------------------------------------------------
-
 # Habilitamos el modo de shell para mostrar los comandos que se ejecutan
 set -x
-# Actualizamos la lista de paquetes
+# Actualizamos el repositorio
 apt-get update
 # inatalamos ngnix
 apt-get install nginx -y
-#iniciamos los modulos
+#iniciamos los modulos necesarios
 apt-get install php-fpm php-mysql -y
-#configuracion de php-fpm
+#configuracion de php-fpm con este comando sustituimos la directiva ; cgi.fix_pathinfo = 1 por cgi.fix_pathinfo = 0. sed -i modifica y guarda y la 's' busca y remplaza.
 sed -i " s /; cgi.fix_pathinfo = 1 / cgi.fix_pathinfo = 0 / " /etc/php/7.4/fpm/php.ini
 #reiniciamos el servicio
 systemctl reiniciar php7.4-fpm
-#copiamos el archivo
+#copiamos el archivo de configuracion de Ngnix
 cp default /etc/nginx/sites-available/
-#reiniciamos sercicio
+#reiniciamos sercicio ngnix
 systemctl reiniciar nginx
 
 #----------------------
