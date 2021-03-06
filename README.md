@@ -171,4 +171,5 @@ listen = /run/php/php7.4-fpm.sock</code></pre>
 <li><a href="https://kinsta.com/es/blog/nginx-vs-apache/">Nginx vs Apache: Lucha entre Servidores Web</a>. Tonino Jankov.</li>
 <li><a href="https://www.tecmint.com/connect-nginx-to-php-fpm/">How to Connect NGINX to PHP-FPM Using UNIX or TCP/IP Socket</a>. Aaron Kili.</li>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-redundant-storage-pool-using-glusterfs-on-ubuntu-20-04-es">Cómo crear un grupo de almacenamiento redundante con GlusterFS en Ubuntu 20.04</a>. Mark Drake.</li>
+<li><a href="https://josejuansanchez.org/iaw/practica-06-teoria/index.html">informacion</a>Pagina</li>
 </ul>
