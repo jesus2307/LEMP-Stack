@@ -1,16 +1,14 @@
 #!/bin/bash
-
-# ------------------------------------------------------------------------------
-# Instalación de la pila LAMP
-# ------------------------------------------------------------------------------
+# Script para máquina back_end 
 # Definimos la contraseña de root como variable
 DB_ROOT_PASSWD=root
 DB_USU_PASSWD=usuario
-# Instalación de MySQL 
+# Instalación y configuración de MySQL 
 # Habilitamos el modo de shell para mostrar los comandos que se ejecutan
 set -x
 # Actualizamos y actualizamos la lista de paquetes
 apt update  
+apt upgrade -y
 # Instalamos el sistema gestor de base de datos
 apt install mysql-server -y
 
