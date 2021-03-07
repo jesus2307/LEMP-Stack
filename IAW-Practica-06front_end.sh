@@ -60,7 +60,8 @@ apt-get install goaccess -y
 # Creamos el directorio stats.
 mkdir /var/www/html/stats
 # Lanzamos el proceso en segundo plano
-nohup goaccess /var/log/apache2/access.log -o /var/www/html/stats/index.html --log-format=COMBINED --real-time-html &
+nohup goaccess /var/log/apache2/access.log -o /var/www/html/stats/index.html --log-format=COMBINED --real-time-html & /*Esto significa que el shell no espera para finalizar el comando antes de ejecutar el siguiente comando. <script> (adsbygoogle = window.adsbygoogle || []).push({}); El formato para la ejecución de un comando en segundo plano es: comando1 & [comando2 & ... ] Fuente: https://www.enmimaquinafunciona.com/pregunta/163599/cual-es-el-significado-de--al-final-de-un-comando*/
+# & Esto significa que el shell no espera para finalizar el comando antes de ejecutar el siguiente comando. El formato para la ejecución de un comando en segundo plano es: comando1 & [comando2 & ... ]
 htpasswd -c -b $HTTPASSWD_DIR/.htpasswd $HTTPASSWD_USER $HTTPASSWD_PASSWD
 # Instalamos phpMyAdmin #
 # Nos situamos en el directorio de usuario
